@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="nav">
+        <div class="menu">
+          <a href="#" class="active">Discover</a>
+          <a href="#">Apps</a>
+          <a href="#">Movies</a>
+          <a href="#">Dashboard</a>
+          <div class="searchBox">
+            <ion-icon name="search"></ion-icon>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <div class="main">
+        <div class="trendingMovies movies">
+          <p>Trending Movies</p>
+          <div class="cards">
+            <div class="card" data-text="Friends">
+              <img src="./movies/trendingMovies/friends-.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Ginny and Georgia">
+              <img src="./movies/trendingMovies/Ginny-Georgia.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Glass Onion">
+              <img src="./movies/trendingMovies/glass-onion-.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Murder Mystery">
+              <img src="./movies/trendingMovies/murder-mystery.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Peaky Blinders">
+              <img src="./movies/trendingMovies/peaky-blinders.avif" alt="" />
+            </div>
+            <div class="card" data-text="Spider Man">
+              <img
+                src="./movies/trendingMovies/Spider-Man-No-Way-Home.jpg"
+                alt=""
+              />
+            </div>
+            <div class="card" data-text="Uncharted">
+              <img src="./movies/trendingMovies/uncharted-2.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="othermMovies movies">
+          <p>Other Movies</p>
+          <div class="cards">
+            <div class="card" data-text="Christmas Drop">
+              <img src="./movies/otherMovies/christmas-drop.png" alt="" />
+            </div>
+            <div class="card" data-text="The Good Doctor">
+              <img src="./movies/otherMovies/good-doctor.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Joker">
+              <img src="./movies/otherMovies/joker.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Just Mercy">
+              <img src="./movies/otherMovies/just-mercy.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Pictch Perfect">
+              <img src="./movies/otherMovies/pitch-perfect.jpg" alt="" />
+            </div>
+            <div class="card" data-text="The Princess Switch">
+              <img src="./movies/otherMovies/princess-switch.jpg" alt="" />
+            </div>
+            <div class="card" data-text="All together now">
+              <img src="./movies/otherMovies/all-together-now.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="webSeries movies">
+          <p>Web Series</p>
+          <div class="cards">
+            <div class="card" data-text="Anne with an E">
+              <img src="./movies/webSeries/anne.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Atypical">
+              <img src="./movies/webSeries/atypical.jpg" alt="" />
+            </div>
+            <div class="card" data-text="The Blacklist">
+              <img src="./movies/webSeries/blacklist.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Shadow and Bone">
+              <img src="./movies/webSeries/shadow-and-bone.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Den of Thieves">
+              <img src="./movies/webSeries/den-of-theives.jpeg" alt="" />
+            </div>
+            <div class="card" data-text="John Wick">
+              <img src="./movies/webSeries/John_Wick.jpg" alt="" />
+            </div>
+            <div class="card" data-text="Tarzan">
+              <img src="./movies/webSeries/tarzan.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script>
+      const a = document.querySelectorAll("a");
+
+      a.forEach((e) => {
+        e.addEventListener("click", (e) => {
+          console.log(e.target.classList);
+          a.forEach((e) => {
+            e.classList.remove("active");
+          });
+          if (!e.target.classList.contains("active")) {
+            e.target.classList.add("active");
+          }
+        });
+      });
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
